@@ -1,0 +1,12 @@
+
+Los strings son inmutables, no se puede cambiar.
+los string tambien se pueden comparar (==, <,>), en orden lexico grafico
+
+ASCII VS UNICODE
+*Ambos son codificadores de caracteres
+*ASCII(American standard code for information interchange- solo caracteres del lejuaje ingles)
+*Unicode(incluye la mayoria de lenguajes del mundo)
+
+python 2.x(asume que los caracteres son ascci)
+python 3.x(asume que los caracteres son unicode)
+

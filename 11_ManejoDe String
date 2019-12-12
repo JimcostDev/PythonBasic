@@ -1,0 +1,52 @@
+my_string = 'platzi'
+my_string[0] devuelve 'p'
+my_string[5] devuelve 'i'
+
+len(my_string) devuelve 6
+longitud = len(my_string) devuelve 6
+my_string[len(my_string) - 1] devuelve 'i'
+
+metodos de string:
+Cuando tienes una string, existen muchos metodos que hacen trabajar con ellas:
+*upper (me regresa todo en mayusculas)
+    my_string.upper() devuelve 'PLATZI'
+*isupper (pregunta si el string esta todo en mayuscula)
+*lower (me regresa todo en minusculas)
+    my_other_string  = 'EDTEAM'
+    my_other_string.lower()
+*islower (pregunta si el string esta todo en minuscula)
+*find (encontrar el indice de un string)
+    my_other_string.find('T') devuelve 2
+*isdigit
+*endswith
+
+endswith ()
+~~~~~~~~~~~
+
+El método endswith () devuelve True si una cadena finaliza con el sufijo
+especificado. Si no, devuelve False.
+
+.. code:: ipython3
+
+    mi_str = "esta es una prueba de string."
+    resultado = mi_str.endswith('string')
+    print(resultado)
+    resultado = mi_str.endswith('string.')
+    print(resultado)
+    resultado = mi_str.endswith('string.',10,12)
+    print(resultado)
+    resultado = mi_str.endswith('esta',0,4)
+    print(resultado)
+
+
+.. parsed-literal::
+
+    False
+    True
+    False
+    True
+*starswith
+  lo contrario a endswith
+*split
+*join
+https://platzi.com/contributions/metodos-de-strings-en-python-3/?utm_source=google&utm_medium=cpc&utm_campaign=6466510681&utm_adgroup=77149603403&utm_content=379716150715&utm_source=google&utm_medium=cpc&gclid=EAIaIQobChMI--Tjouy35QIVF2yGCh1gqQlHEAAYASAAEgK1AfD_BwE

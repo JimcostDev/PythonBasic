@@ -1,0 +1,6 @@
+my_string = 'platzi'
+my_string[1:] - devuelve 'latzi' //comienza en el indice 1 y va hasta(:) el final
+my_string[1:3] - devuelve 'la' // desde el indice 1 hasta el 3
+my_string[1:6:2] - devuelve 'lti'// desde el indice 1 hasta el pero en saltos de 2
+my_string[::] - devuelve 'platzi'// desde el principio hasta el final
+my_string[::-1] - devuelve 'iztalp'// desde el principio hasta el final en pasos de -1(de der. a izq.)
