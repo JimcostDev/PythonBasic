@@ -28,7 +28,7 @@ def palindrome(word):
 if __name__ == '__main__':
     word = str(input('Escribe una palabra: '))
 
-    result = palindrome(word)
+    result = palindromeTwo(word)
     if result is True:
         print('{} sí es palíndromo.'.format(word))
     else:
