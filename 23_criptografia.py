@@ -67,6 +67,7 @@ KEYS = {
     '!': 'B',
 }
 
+
 def cypher(message):
     words = message.split(' ')
     cypher_message = []
@@ -100,7 +101,6 @@ def decipher(message):
 
 
 def run():
-
     while True:
 
         command = str(input('''--- * --- * --- * --- * --- * --- * --- * ---

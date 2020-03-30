@@ -5,9 +5,9 @@
 concatenar = 'el area' + ' es:'
 pi = 3.14159
 radio = 3
-area = pi * radio**2
+area = pi * radio ** 2
 print(concatenar, area)
-#cambio de valor la variable radio
+# cambio de valor la variable radio
 radio = 5
-area = pi * radio**2
+area = pi * radio ** 2
 print(concatenar, area)
