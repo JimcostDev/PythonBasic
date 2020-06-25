@@ -1,0 +1,16 @@
+ENTORNO VIRTUAL EN PYTHON
+Paquetes de terceros
+
+PyPi (python package index) repositorio de paquete de terceros
+Para instalar un paquete de tercero es necesario pip
+Forma de instalar un paquete “pip install paquete”
+Se puede agrupara varios paquetes en el archivo requirements.txt
+AMBIENTES VIRTUALES
+
+Buena practica tener un entorno por cada proyecto de Python, con el fin de evitar conflictos en el interprete ppal.
+1. pip install virtualenv -- intalar entorno virtual (where pip = saber si tengo instalado pip)
+2. virtualenv venv -- crear nuestro primer entorno virtual (chdir = saber en que directorio estoy)
+3. venv\Scripts\activate.bat -- activar entorno virtual
+desactivate
+4. pip install flask -- instalar flask
+5. pip install -r requirements.txt -- instalar lo que tenga en requirements.txt
