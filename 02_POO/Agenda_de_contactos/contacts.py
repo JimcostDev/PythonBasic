@@ -1,3 +1,8 @@
+"""Persistencia: memoria de largo plazo (disco duro)"""
+
+import csv
+
+
 class Contact:
     def __init__(self, name, phone, email):
         self.name = name
@@ -12,6 +17,7 @@ class ContactBook:
     def add(self, name, phone, email):
         contact = Contact(name, phone, email)
         self._contacts.append(contact)
+        self._save()
 
     def show_all(self):
         for contact in self._contacts:
@@ -21,6 +27,7 @@ class ContactBook:
         for idx, contact in enumerate(self._contacts):
             if contact.name.lower() == name.lower():
                 del self._contacts[idx]
+                self._save()
                 break
 
     def search(self, name):
@@ -36,9 +43,19 @@ class ContactBook:
             if contact.name.lower() == name.lower():
                 contact.phone = phone
                 contact.email = email
+                self._save()
                 break
         else:
             self._not_found()
+
+    # guardar en disco
+    def _save(self):
+        with open('contacts.csv', 'w') as filepy:
+            writer = csv.writer(filepy)
+            writer.writerow(('name', 'phone', 'email'))
+
+            for contact in self._contacts:
+                writer.writerow((contact.name, contact.phone, contact.email))
 
     def _print_contact(self, contact):
         print('--- * --- * --- * --- * --- * --- * --- * ---')
@@ -55,6 +72,20 @@ class ContactBook:
 
 def run():
     contact_book = ContactBook()
+    # leer
+    try:
+        with open('contacts.csv', 'r') as f:
+            reader = csv.reader(f)
+            for index, row in enumerate(reader):
+                if len(row) == 0:
+                    continue
+                if index == 0:
+                    # Salta la primera fila que tiene los nombres de los campos 'name,phone,email'.
+                    continue
+                contact_book.add(row[0], row[1], row[2])
+    except FileNotFoundError:
+        print('No existe el archivo \'contacts.csv\'. Debe añadir un nuevo contacto para crearlo.')
+
     while True:
         command = str(input('''
             ¿Qué deseas hacer?
