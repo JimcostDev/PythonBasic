@@ -1,0 +1,24 @@
+PASAR DE WORKING DIRECTORY A STAGING AREA:
+
+--iniciar un repositorio
+git init primer_repo o simplenete git init
+
+--ver el estado de los archivos
+git status
+
+--agregar archivos a nuestro staging area, listos para hacer commit
+git add <nameFile> 
+
+--Agregar todos mis archivos del working directory a staging area
+git rm -A
+
+--Quitar archivo de staging area
+git rm --cached <nameFile> 
+
+
+--Elimina un archivo forsadamente (es decir lo saca de stagin y elimina el archivo)
+git rm -f <nameFile> 
+
+--Verifica si el archivo existe o no dentro del directorio
+git add -n <nameFile>
+

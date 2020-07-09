@@ -1,0 +1,15 @@
+
+//nombre de usuario
+git config --global user.name "JimcostDev"
+
+//email
+git config --global user.email rjak727@mail.com
+
+//editor
+git config --global core.editor code
+
+//activar colores
+git config --global color.ui true
+
+//revisar otras configuraciones
+git config --list

@@ -1,0 +1,12 @@
+Otra herramienta que podemos usar con git es la revisión de los cambios. 
+Para esto vamos a usar el comando git diff.Si queremos saber cuáles son 
+los cambios que hemos tenido entre un commit y otro, solo debemos hacer 
+una comparación entre un commit y otro usando Sha-1.
+
+--revisar cambio entre estado actual  y el commit que le envie como param (sha-1)
+git diff <SHA-1>
+
+--comparar commit A y commit B
+git diff <SHA-1> <SHA-1>
+git diff <version-1> <version-2>
+

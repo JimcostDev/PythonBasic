@@ -1,0 +1,30 @@
+Alguna vez tuviste un error y quisiste borrar el commit que habías enviado. 
+Para esto podemos hacer a través de git reset. Si quieres usar este comando 
+debes tener mucho cuidado, porque puedes borrar muchos commits.
+El comando reset --soft nos permite identificar el commit que queremos resetear.
+
+
+--reescribir la historia de tu proyecto, desde que commit queremos quitar los cambios.
+Devolvemos los cambios del repositorio al staging area
+git reset --soft <sha-1>
+
+    Cuando aplicas reset --soft al commit numero 7, los commit 8, 9 y 10 se vuelven 
+    commits de una rama(branch) alterna a la MASTER, son borrados de la rama principal, 
+    pero puedes acceder a ellos como como una rama alterna.
+
+    Para visualizar lo descrito anteriormente usar git superlog, ya que usando git log, 
+    solo puedes acceder a la rama MASTER o a la rama donde has hecho checkout
+
+--Con este comando eliminamos tanto los cambios del repositorio, como del staging,
+llevandolo directamente al working directory
+git reset --mixed <sha-1>
+
+--Borrar todo hasta el commit que nos queremos devolver
+git reset --hard <sha-1>
+
+--regresar al estado actual
+git reset --hard <sha-1-actual/ultimo>
+RESUMEN:
+git reset --soft [SHA 1]: elimina los cambios hasta el staging area
+git reset --mixed [SHA 1]: elimina los cambios hasta el working area
+git reset --hard [SHA 1]: regresa hasta el commit del [SHA 1]

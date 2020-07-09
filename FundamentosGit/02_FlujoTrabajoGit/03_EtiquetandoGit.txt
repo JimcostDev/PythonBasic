@@ -1,0 +1,19 @@
+VERSIONAR TU PROTECTO (git tag)
+
+--etiqueta ligera (commit actual)
+git tag <version>
+
+--etiqueta anotada
+git tag -a <version> -m 'version estable del proyecto'
+
+--mostrar tags
+git tag -l
+
+--versionar commit anterior (ligero) por su hash
+git tag 0.09 9210ad60af9b619a49ad7a199931fef5b4a35957
+
+--borrar tag
+git tag -d <version>
+
+--renombrar tag
+git tag -f -a <version> -m 'iniciando el proyecto'

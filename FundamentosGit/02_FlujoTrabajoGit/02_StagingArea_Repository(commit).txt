@@ -1,0 +1,10 @@
+PASAR DE STAGING AREA A GIT DIRECTORY(REPOSITORIO):
+
+--Confirmando cambios
+git commit -m "descripcion de lo que hemos hecho"
+
+--sobreescribir mensaje o concatenar un mensaje al commit
+git commit --amend -m "mensaje"
+
+--ver nuestros commits
+git log
